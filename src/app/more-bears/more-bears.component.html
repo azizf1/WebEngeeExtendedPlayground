@@ -1,0 +1,12 @@
+<section class="more_bears">
+  <h3>More Bears</h3>
+  <div *ngFor="let bear of bears">
+    <h3>{{ bear.name }} ({{ bear.binomial }})</h3>
+    <img
+      [src]="bear.image"
+      [alt]="bear.name"
+      style="width: 200px; height: auto"
+    />
+    <p><strong>Range:</strong> {{ bear.range }}</p>
+  </div>
+</section>

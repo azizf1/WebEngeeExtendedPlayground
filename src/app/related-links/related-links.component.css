@@ -1,0 +1,12 @@
+/* Ensures html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove any default margin */
+  }
+  
+  /* Make the .secondary element take full height */
+  .secondary {
+    height: 99%;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #1b8dca;
+  }
