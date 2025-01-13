@@ -235,6 +235,12 @@ html, body {
     display: block;
     margin: 0 auto;
   }
+
+  .comment-form input[type="submit"]:disabled {
+    background: #aaa; /* A lighter color to indicate it's disabled */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    opacity: 0.6; /* Add transparency to make it visually distinct */
+  }
   
   .comment-container {
     margin-top: 0;
