@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./bear-backend
+      target: production
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+
+  frontend:
+    build:
+      context: ./bear-frontend
+      target: production
+    ports:
+      - "80:80"
+    environment:
+      NODE_ENV: production

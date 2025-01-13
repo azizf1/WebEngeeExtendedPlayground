@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./bear-backend
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./bear-backend:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+
+  frontend:
+    build:
+      context: ./bear-frontend
+      target: development
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./bear-frontend:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+    command: ["npm", "start", "--", "--host", "0.0.0.0"]
